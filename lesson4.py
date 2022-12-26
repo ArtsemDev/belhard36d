@@ -100,8 +100,8 @@
 # # # # # # user = dict([('name', 'alex'), ('age', 43)])
 # # # # # # print(user)
 # # # # #
-# # # # # letters = {i: i*2 for i in 'hello'}
-# # # # # print(letters)
+# letters = {i: i*2 for i in 'hello'}
+# print(letters)
 # # # #
 # # # # user = dict.fromkeys(('name', 'age', 'city'), 'value')
 # # # # print(user)
@@ -212,4 +212,19 @@ from collections import Counter
 # chain['c'] = 8
 # print(chain)
 
-
+# data = {
+#     1: {
+#         'name': 'alex',
+#         'email': 'alex@gmail.com'
+#     },
+#     2: {
+#         'name': 'pavel',
+#         'email': 'pavel@gmail.com'
+#     }
+# }
+# print(data[2]['email'])
+# data = {
+#     'key1': {
+#         'inner_key1': ['hello', 'world']
+#     }
+# }
