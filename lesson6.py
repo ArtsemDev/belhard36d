@@ -278,19 +278,34 @@
 #  На вход функции, поступает строка, на ее основании сформировать и вернуть
 #  список, который будет содержать только слова, длина которых >= 5
 
-text = 'hello python world age hell dog pycharm'
+# text = 'hello python world age hell dog pycharm'
+# #
+# # words = list(filter(lambda x: len(x) >= 5, text.split()))
+# # print(words)
 #
-# words = list(filter(lambda x: len(x) >= 5, text.split()))
-# print(words)
-
-def filter_words(text):
-    words = text.split()
-    for i in range(len(words) - 1, -1, -1):
-        if len(words[i]) < 5:
-            del words[i]
-    return words
-
-
-print(filter_words(text))
-
+# def filter_words(text):
+#     words = text.split()
+#     for i in range(len(words) - 1, -1, -1):
+#         if len(words[i]) < 5:
+#             del words[i]
+#     return words
 #
+#
+# print(filter_words(text))
+
+#  написать функцию generate_password принимающая на вход 2 аргумента
+#  имя ресурса, длина пароля, функция должна генерировать пароль указанной длины
+#  с использованием букв и фицр и записывать его в глобальный словарь passwords
+#  имя ресурса - ключ, пароль - значение
+
+from random import choice
+from string import ascii_letters, digits
+
+passwords = {}
+
+
+def generate_password(name, length):
+    password = ''
+    for _ in range(length):
+        password += choice(ascii_letters + digits)
+    passwords[name] = password
